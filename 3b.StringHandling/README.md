@@ -8,7 +8,7 @@
 
 [3b5_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb5.java)
 
-[3b1_StringHandling output]->()
+[3b1_StringHandling output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/3b1%20output.png)
 
 [3b2_StringHandling output]->()
 
