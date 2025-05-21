@@ -1,3 +1,10 @@
+/*
+Basic hello program of Swing displaying the message Hello! VI B , Welcome to Swing
+Programming in Blue color plain font with font size of 32 using Jframe and Jlabel
+
+*/
+
+
 package swinDemo;
 import javax.swing.*;
 import java.awt.*;
