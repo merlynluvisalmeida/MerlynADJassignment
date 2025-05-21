@@ -1,6 +1,6 @@
 [3b1_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb1.java)
 
-[3b2_StringHandling]->()
+[3b2_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb2.java)
 
 [3b3_StringHandling]->()
 
