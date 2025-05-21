@@ -1,3 +1,7 @@
+/*
+Write a Java Program for Checking if a given string is null or contains only whitespace using user
+defined function isNullOrEmpty().
+*/
 package twoa;
 import java.util.Scanner;
 public class Threeb1 {
