@@ -6,7 +6,7 @@
 
 [3b4_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb4.java)
 
-[3b5_StringHandling]->()
+[3b5_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb5.java)
 
 [3b1_StringHandling output]->()
 
