@@ -6,7 +6,7 @@
 
 [1b4_ArrayList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1b.ArrayList/ArrayList1b4.java)
 
-[1b5_ArrayList]->()
+[1b5_ArrayList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1b.ArrayList/ArrayList1b5.java)
 
 
 
