@@ -8,7 +8,7 @@
 
 [1b5_ArrayList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1b.ArrayList/ArrayList1b5.java)
 
-[1b1_ArrayList output]->()
+[1b1_ArrayList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1b.ArrayList/1b1_ArrayList%20output.png)
 
 [1b2_ArrayList output]->()
 
