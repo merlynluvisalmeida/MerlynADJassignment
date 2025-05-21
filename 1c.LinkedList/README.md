@@ -4,7 +4,7 @@
 
 [1c3_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c3.java)
 
-[1c4_LinkedList]->()
+[1c4_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c4.java)
 
 [1c5_LinkedList]->()
 
