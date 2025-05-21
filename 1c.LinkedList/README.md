@@ -10,7 +10,7 @@
 
 [1c1_LinkedList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/1c1_LinkedList%20output.png)
 
-[1c2_LinkedList output]->()
+[1c2_LinkedList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/1c2_LinkedList%20output.png)
 
 [1c3_LinkedList output]->()
 
