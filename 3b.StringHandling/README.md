@@ -14,6 +14,6 @@
 
 [3b3_StringHandling output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/3c3%20output.png)
 
-[3b4_StringHandling output]->()
+[3b4_StringHandling output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/3c4%20output.png)
 
 [3b5_StringHandling output]->()
