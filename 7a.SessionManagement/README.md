@@ -1,4 +1,4 @@
-[7a_SessionManagement index.html]->()
+[7a_SessionManagement index.html]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/index.html)
 
 [7a_SessionManagement second.jsp]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/second.jsp)
 
