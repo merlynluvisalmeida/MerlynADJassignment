@@ -2,7 +2,7 @@
 
 [3b2_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb2.java)
 
-[3b3_StringHandling]->()
+[3b3_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3b.StringHandling/Threeb3.java)
 
 [3b4_StringHandling]->()
 
