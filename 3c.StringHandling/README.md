@@ -4,7 +4,7 @@
 
 [3c3_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3c.StringHandling/Threec3.java)
 
-[3c4_StringHandling]->()
+[3c4_StringHandling]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3c.StringHandling/Threec4.java)
 
 [3c5_StringHandling]->()
 
