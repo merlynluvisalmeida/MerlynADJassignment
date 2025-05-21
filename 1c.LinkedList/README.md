@@ -8,7 +8,7 @@
 
 [1c5_LinkedList]->()
 
-[1c1_LinkedList output]->()
+[1c1_LinkedList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/1c1_LinkedList%20output.png)
 
 [1c2_LinkedList output]->()
 
