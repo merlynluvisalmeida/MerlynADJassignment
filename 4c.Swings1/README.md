@@ -1,3 +1,3 @@
 [4c_SWings1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4c.Swings1/4c.Swings1.java)
 
-[4c_Swings1 output]->()
+[4c_Swings1 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4c.Swings1/4c%20output.png)
