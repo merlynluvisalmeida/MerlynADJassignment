@@ -12,7 +12,7 @@
 
 [3c1_StringHandling output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3c.StringHandling/3c2%20output.png)
 
-[3c1_StringHandling output]->()
+[3c1_StringHandling output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/3c.StringHandling/3c3%20output.png)
 
 [3c1_StringHandling output]->()
 
