@@ -23,70 +23,52 @@ Grand Salary : 45000
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-
 <%@ page import="java.sql.*" %>
 <%
-    int empno = Integer.parseInt(request.getParameter("empno"));
+    String jdbcURL = "jdbc:mysql://localhost:3306/Employee";
+    String dbUser = "root";  // Change if needed
+    String dbPassword = "";  // Change if needed
+
+    String empnoStr = request.getParameter("empno");
     String empname = request.getParameter("empname");
-    double basicsalary = Double.parseDouble(request.getParameter("basicsalary"));
+    String basicsalaryStr = request.getParameter("basicsalary");
 
-    String url = "jdbc:mysql://localhost:3306/Employee12";
-    String user = "root";          // change if needed
-    String password = "";          // set your MySQL password
+    if (empnoStr != null && empname != null && basicsalaryStr != null) {
+        int empno = Integer.parseInt(empnoStr);
+        double basicsalary = Double.parseDouble(basicsalaryStr);
 
-    Connection conn = null;
-    PreparedStatement pstmt = null;
-    Statement stmt = null;
-    ResultSet rs = null;
-    double grandTotal = 0;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
 
-    try {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection(url, user, password);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-        // Insert new employee
-        String sqlInsert = "INSERT INTO Emp (empno, empname, basicsalary) VALUES (?, ?, ?)";
-        pstmt = conn.prepareStatement(sqlInsert);
-        pstmt.setInt(1, empno);
-        pstmt.setString(2, empname);
-        pstmt.setDouble(3, basicsalary);
-        pstmt.executeUpdate();
+            String sql = "INSERT INTO Emp (Emp_NO, Emp_Name, Basicsalary) VALUES (?, ?, ?)";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, empno);
+            pstmt.setString(2, empname);
+            pstmt.setDouble(3, basicsalary);
 
-        // Generate salary report
-        stmt = conn.createStatement();
-        rs = stmt.executeQuery("SELECT * FROM Emp");
+            int rowsInserted = pstmt.executeUpdate();
 
-%>
-<html>
-<head><title>Salary Report</title></head>
-<body>
-    <h2>Salary Report</h2>
-    <pre>
-<%
-        while(rs.next()) {
-            int eno = rs.getInt("empno");
-            String ename = rs.getString("empname");
-            double sal = rs.getDouble("basicsalary");
-            grandTotal += sal;
-%>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Emp_No   : <%= eno %>
-Emp_Name : <%= ename %>
-Basic    : <%= sal %>
-<%
+            if (rowsInserted > 0) {
+                out.println("<h3>Employee Added Successfully</h3>");
+            } else {
+                out.println("<h3>Failed to add employee</h3>");
+            }
+
+        } catch (Exception e) {
+            out.println("<h3>Error: " + e.getMessage() + "</h3>");
+        } finally {
+            if (pstmt != null) try { pstmt.close(); } catch(Exception e) {}
+            if (conn != null) try { conn.close(); } catch(Exception e) {}
         }
-%>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Grand Salary : <%= grandTotal %>
-    </pre>
-</body>
-</html>
-<%
-    } catch(Exception e) {
-        out.println("<p>Error: " + e.getMessage() + "</p>");
-    } finally {
-        try { if (pstmt != null) pstmt.close(); } catch (Exception e) {}
-        try { if (stmt != null) stmt.close(); } catch (Exception e) {}
-        try { if (conn != null) conn.close(); } catch (Exception e) {}
+
+        out.println("<p><a href='addEmp.html'>Add Another Employee</a></p>");
+        out.println("<p><a href='ReportEmp.jsp'>View Salary Report</a></p>");
+    } else {
+        out.println("Invalid input");
     }
 %>
+    
