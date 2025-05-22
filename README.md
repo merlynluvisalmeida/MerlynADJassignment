@@ -78,6 +78,10 @@ ________________________________________________________________________________
 
 [6a_servlet output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6a.Servlet/fact%20output2.png)
 
+[6b_output1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6b.Servlet/6b.Welcome1.png)
+
+[6b_output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6b.Servlet/6b.display1.png)
+
 [6c output1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6c.Servlet/primeno%20output1.png)
 
 [6c output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6c.Servlet/primeno%20output2.png)
