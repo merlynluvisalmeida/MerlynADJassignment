@@ -39,16 +39,12 @@ CREATE TABLE `emp` (
 --
 
 INSERT INTO `emp` (`Emp_NO`, `Emp_Name`, `Basicsalary`) VALUES
-(14, 'keerthana', 40000),
-(15, 'keerthana', 40000),
-(100, 'sanu', 390000),
-(102, 'saakshi', 10000),
-(111, 'sahana', 500000),
-(122, 'sahanag', 90000),
-(123, 'keerthana', 390000),
-(124, 'keerthana', 390000),
-(145, 'anvin', 70000);
-
+(100, 'aiya', 67000),
+(101, 'ram', 56000),
+(102, 'reena', 34000),
+(103, 'sita', 30000),
+(104, 'tara', 45000),
+(104, 'heetha, 29000),
 --
 -- Indexes for dumped tables
 --
