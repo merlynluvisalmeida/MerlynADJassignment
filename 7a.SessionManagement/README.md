@@ -1,8 +1,3 @@
-[7a_SessionManagement index.html]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/index.html)
-
-[7a_SessionManagement second.jsp]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/second.jsp)
-
-[7a_SessionManagement welcome.jsp]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/welcome.jsp)
 
 [7a_SessionManagement output session1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/session1.png)
 
