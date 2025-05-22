@@ -70,6 +70,7 @@ ________________________________________________________________________________
 
 [5c_Swings2 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5c.Swings/5a_output.png)
 
+[5d_Swings output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5d.Swings/5d%20output.png)
 _____________________________________________________________________________________________________________________________
 6.SERVLET PROGRAM
 
