@@ -5,56 +5,46 @@ results respectively
 */
 
 
-
-
 <%@ page import="java.sql.*" %>
-<%@ page import="javax.sql.*" %>
 <%
-    // Retrieving form data
-    int empno = Integer.parseInt(request.getParameter("empno"));
-    String empname = request.getParameter("empname");
-    double basicsalary = Double.parseDouble(request.getParameter("basicsalary"));
+    String empNoStr = request.getParameter("empno");
+    String empName = request.getParameter("empname");
+    String basicSalaryStr = request.getParameter("basicsalary");
 
-    // JDBC setup
-    String url = "jdbc:mysql://localhost:3306/Employee12";
-    String username = "root"; // change as needed
-    String password = ""; // change as needed
+    int empNo = Integer.parseInt(empNoStr);
+    double basicSalary = Double.parseDouble(basicSalaryStr);
 
-    Connection con = null;
-    PreparedStatement ps = null;
+    String jdbcURL = "jdbc:mysql://localhost:3306/Employee";
+    String dbUser = "root";
+    String dbPassword = ""; // Change if necessary
+
+    Connection conn = null;
+    PreparedStatement pstmt = null;
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        con = DriverManager.getConnection(url, username, password);
+        conn = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-        // Check if employee exists
-        String checkSql = "SELECT * FROM Emp WHERE empno = ?";
-        ps = con.prepareStatement(checkSql);
-        ps.setInt(1, empno);
-        ResultSet rs = ps.executeQuery();
+        String sql = "UPDATE Emp SET Emp_Name = ?, Basicsalary = ? WHERE Emp_NO = ?";
+        pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, empName);
+        pstmt.setDouble(2, basicSalary);
+        pstmt.setInt(3, empNo);
 
-        if (rs.next()) {
-            // Update if exists
-            String updateSql = "UPDATE Emp SET empname = ?, basicsalary = ? WHERE empno = ?";
-            ps = con.prepareStatement(updateSql);
-            ps.setString(1, empname);
-            ps.setDouble(2, basicsalary);
-            ps.setInt(3, empno);
-            int updated = ps.executeUpdate();
+        int rowsUpdated = pstmt.executeUpdate();
 
-            if (updated > 0) {
-                out.println("<h3>Employee updated successfully.</h3>");
-            } else {
-                out.println("<h3>Update failed.</h3>");
-            }
+        if (rowsUpdated > 0) {
+            out.println("<h3>Employee record updated successfully!</h3>");
         } else {
-            out.println("<h3>Employee not found. Please check the Employee Number.</h3>");
+            out.println("<h3>No employee found with Emp_No: " + empNo + "</h3>");
         }
 
     } catch (Exception e) {
-        out.println("<h3>Error: " + e.getMessage() + "</h3>");
+        out.println("Database error: " + e.getMessage());
     } finally {
-        if (ps != null) ps.close();
-        if (con != null) con.close();
+        if (pstmt != null) try { pstmt.close(); } catch (Exception e) {}
+        if (conn != null) try { conn.close(); } catch (Exception e) {}
     }
 %>
+<p><a href="updateEmp.html">Update Another Employee</a></p>
+<p><a href="viewEmp.jsp">View All Employees</a></p>
