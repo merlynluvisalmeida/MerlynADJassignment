@@ -7,44 +7,54 @@ results respectively
 
 <%@ page import="java.sql.*" %>
 <%
-    String empNoStr = request.getParameter("empno");
-    String empName = request.getParameter("empname");
-    String basicSalaryStr = request.getParameter("basicsalary");
+    String empnoStr = request.getParameter("empno");
+    String empname = request.getParameter("empname");
+    String basicsalaryStr = request.getParameter("basicsalary");
 
-    int empNo = Integer.parseInt(empNoStr);
-    double basicSalary = Double.parseDouble(basicSalaryStr);
-
-    String jdbcURL = "jdbc:mysql://localhost:3306/Employee";
-    String dbUser = "root";
-    String dbPassword = ""; // Change if necessary
+    int empno = Integer.parseInt(empnoStr);
+    double basicsalary = Double.parseDouble(basicsalaryStr);
 
     Connection conn = null;
     PreparedStatement pstmt = null;
+    String message = "";
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Employee", "root", "");
 
-        String sql = "UPDATE Emp SET Emp_Name = ?, Basicsalary = ? WHERE Emp_NO = ?";
+        // Replace EmpNo with your actual column name
+        String sql = "UPDATE Emp SET empname = ?, basicsalary = ? WHERE EmpNo = ?";
         pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, empName);
-        pstmt.setDouble(2, basicSalary);
-        pstmt.setInt(3, empNo);
+        pstmt.setString(1, empname);
+        pstmt.setDouble(2, basicsalary);
+        pstmt.setInt(3, empno);
 
         int rowsUpdated = pstmt.executeUpdate();
 
         if (rowsUpdated > 0) {
-            out.println("<h3>Employee record updated successfully!</h3>");
+            message = "Employee updated successfully!";
         } else {
-            out.println("<h3>No employee found with Emp_No: " + empNo + "</h3>");
+            message = "No employee found with empno " + empno;
         }
-
     } catch (Exception e) {
-        out.println("Database error: " + e.getMessage());
+        message = "Error: " + e.getMessage();
     } finally {
-        if (pstmt != null) try { pstmt.close(); } catch (Exception e) {}
-        if (conn != null) try { conn.close(); } catch (Exception e) {}
+        try {
+            if (pstmt != null) pstmt.close();
+            if (conn != null) conn.close();
+        } catch (Exception ex) {
+            message += "<br>Error closing resources: " + ex.getMessage();
+        }
     }
 %>
-<p><a href="updateEmp.html">Update Another Employee</a></p>
-<p><a href="viewEmp.jsp">View All Employees</a></p>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Result</title>
+</head>
+<body>
+    <h2><%= message %></h2>
+    <a href="index.html">Back to Update Form</a>
+</body>
+</html>
