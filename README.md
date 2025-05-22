@@ -104,6 +104,10 @@ ________________________________________________________________________________
 [4b_Swings1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4b.Swings1/4b.Swings1.java)
 
 [4b_Swings1 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4b.Swings1/4b%20output.png)
+
+[4c_SWings1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4c.Swings1/4c.Swings1.java)
+
+[4c_Swings1 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4c.Swings1/4c%20output.png)
 ____________________________________________________________________________________________________________________________
 5.SWING PROGRAMS
 _____________________________________________________________________________________________________________________________
