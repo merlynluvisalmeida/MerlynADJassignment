@@ -44,6 +44,9 @@
 [1c5_LinkedList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/1c5_LinkedList%20output.png)
 ____________________________________________________________________________________________________________________________
 2.STRING OPERATION AND STRING BUFFER
+[2a_String ]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/2a.String/Twoa.java)
+
+[2a_String output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/2a.String/2a%20output.png)
 
 ____________________________________________________________________________________________________________________________
 3.STRING OPERATION AND STRING EXERCISES
