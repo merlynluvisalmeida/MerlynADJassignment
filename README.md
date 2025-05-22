@@ -87,6 +87,12 @@ ________________________________________________________________________________
 [6c output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/6c.Servlet/primeno%20output2.png)
 _____________________________________________________________________________________________________________________________
 7.JSP PROGRAM
+
+[7a_SessionManagement output session1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/session1.png)
+
+[7a_SessionManagement output session2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/session2.png)
+
+[7a_SessionManagement output session3]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7a.SessionManagement/session3.png)
 _____________________________________________________________________________________________________________________________
 8.HTML AND JSP AND JDBC PROGRAM
 _____________________________________________________________________________________________________________________________
