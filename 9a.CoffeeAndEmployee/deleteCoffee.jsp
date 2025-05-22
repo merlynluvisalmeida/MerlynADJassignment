@@ -6,68 +6,76 @@ HTML and JSP to get the field and display the results respectively
 */
 
 
-
 <%@ page import="java.sql.*" %>
 <%
-    String idParam = request.getParameter("coffeeId");
-    int deleteId = (idParam != null && !idParam.isEmpty()) ? Integer.parseInt(idParam) : -1;
+    String jdbcURL = "jdbc:mysql://localhost:3306/test12";
+    String dbUser = "root";  // Update if different
+    String dbPassword = "";  // Update if different
 
-    String url = "jdbc:mysql://localhost:3306/test123";
-    String user = "root";
-    String password = ""; // Replace with your actual password
-
-    Connection con = null;
+    Connection conn = null;
     PreparedStatement deleteStmt = null;
     Statement selectStmt = null;
     ResultSet rs = null;
 
+    String idToDelete = request.getParameter("id");
+
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        con = DriverManager.getConnection(url, user, password);
+        conn = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-        if (deleteId != -1) {
-            String deleteSql = "DELETE FROM coffee WHERE id = ?";
-            deleteStmt = con.prepareStatement(deleteSql);
-            deleteStmt.setInt(1, deleteId);
-            deleteStmt.executeUpdate();
-            out.println("<p style='color:green;'>Coffee with ID " + deleteId + " deleted (if existed).</p>");
+        // Delete coffee record
+        if (idToDelete != null && !idToDelete.trim().isEmpty()) {
+            deleteStmt = conn.prepareStatement("DELETE FROM coffee WHERE id = ?");
+            deleteStmt.setInt(1, Integer.parseInt(idToDelete));
+            int rowsDeleted = deleteStmt.executeUpdate();
         }
 
         // Display remaining records
-        out.println("<h2>Remaining Coffee Products</h2>");
-        out.println("<table border='1'><tr><th>ID</th><th>Name</th><th>Price</th></tr>");
-
-        String selectSql = "SELECT * FROM coffee";
-        selectStmt = con.createStatement();
-        rs = selectStmt.executeQuery(selectSql);
-
-        while (rs.next()) {
-            int id = rs.getInt("id");
-
-            // Safely try to retrieve 'name' and 'price', handle missing columns
-            String name = "";
-            double price = 0.0;
-
-            try { name = rs.getString("name"); } 
-            catch (SQLException ex) { name = "N/A"; }
-
-            try { price = rs.getDouble("price"); } 
-            catch (SQLException ex) { price = 0.0; }
-
-            out.println("<tr>");
-            out.println("<td>" + id + "</td>");
-            out.println("<td>" + name + "</td>");
-            out.println("<td>" + price + "</td>");
-            out.println("</tr>");
+        selectStmt = conn.createStatement();
+        rs = selectStmt.executeQuery("SELECT * FROM coffee");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remaining Coffee Records</title>
+    <style>
+        table, th, td {
+            border: 1px solid black; border-collapse: collapse;
+            padding: 8px;
         }
-        out.println("</table>");
-
+    </style>
+</head>
+<body>
+    <h2>Remaining Coffee Records</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Coffee Name</th>
+            <th>Price</th>
+        </tr>
+<%
+        while (rs.next()) {
+%>
+        <tr>
+            <td><%= rs.getInt("id") %></td>
+            <td><%= rs.getString("coffee_name") %></td>
+            <td><%= rs.getDouble("price") %></td>
+        </tr>
+<%
+        }
+%>
+    </table>
+    <br>
+    <a href="deleteCoffee.html">Back to Delete Form</a>
+</body>
+</html>
+<%
     } catch (Exception e) {
-        out.println("<p style='color:red;'>Error: " + e.getMessage() + "</p>");
+        out.println("Error: " + e.getMessage());
     } finally {
-        try { if (rs != null) rs.close(); } catch (Exception ignore) {}
-        try { if (deleteStmt != null) deleteStmt.close(); } catch (Exception ignore) {}
-        try { if (selectStmt != null) selectStmt.close(); } catch (Exception ignore) {}
-        try { if (con != null) con.close(); } catch (Exception ignore) {}
+        if (rs != null) try { rs.close(); } catch(Exception e) {}
+        if (selectStmt != null) try { selectStmt.close(); } catch(Exception e) {}
+        if (deleteStmt != null) try { deleteStmt.close(); } catch(Exception e) {}
+        if (conn != null) try { conn.close(); } catch(Exception e) {}
     }
 %>
