@@ -48,6 +48,10 @@ ________________________________________________________________________________
 
 [2a_String output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/2a.String/2a%20output.png)
 
+[2b_String]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/2b.String/two2b.java)
+
+[2b_String output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/2b.String/2b%20output.png)
+
 ____________________________________________________________________________________________________________________________
 3.STRING OPERATION AND STRING EXERCISES
 ____________________________________________________________________________________________________________________________
