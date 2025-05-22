@@ -113,4 +113,8 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________
 9.MSQL PROGRAM
+
+[9a output1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/9a.CoffeeAndEmployee/9a%20output1.png)
+
+[9a output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/9a.CoffeeAndEmployee/9a%20output2.png)
 _____________________________________________________________________________________________________________________________
