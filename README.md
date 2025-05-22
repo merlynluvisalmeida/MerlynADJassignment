@@ -109,6 +109,12 @@ ________________________________________________________________________________
 [8b_JDBC_Coffee_Employee output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8b.JDBC_Coffee_Employee/8b%20output2.png)
 
 [8b_JDBC_Coffee_Employee output3]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8b.JDBC_Coffee_Employee/8b%20output3.png)
+
+[8c output1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8c.JDBC_Coffee_Employee/8c%20output1.png)
+
+[8c output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8c.JDBC_Coffee_Employee/8c%20output2.png)
+
+[8c output3]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8c.JDBC_Coffee_Employee/8c%20output3.png)
 _____________________________________________________________________________________________________________________________
 9.MSQL PROGRAM
 _____________________________________________________________________________________________________________________________
