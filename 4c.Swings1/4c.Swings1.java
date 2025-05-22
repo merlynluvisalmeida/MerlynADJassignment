@@ -27,8 +27,8 @@ public class ClockButtonDemo extends JFrame implements ActionListener {
         add(messageLabel, BorderLayout.NORTH);
 
         // Load and resize images
-        ImageIcon digitalIcon = new ImageIcon("C:\\Users\\Chaitanya\\Downloads\\alarm.png");
-        ImageIcon hourGlassIcon = new ImageIcon("C:\\Users\\Chaitanya\\Downloads\\hourglass.png");
+        ImageIcon digitalIcon = new ImageIcon("C:\\Users\\Merlyn\\Downloads\\alarm.png");
+        ImageIcon hourGlassIcon = new ImageIcon("C:\\Users\\Merlyn\\Downloads\\hourglass.png");
 
         Image digitalImg = digitalIcon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         Image hourImg = hourGlassIcon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
