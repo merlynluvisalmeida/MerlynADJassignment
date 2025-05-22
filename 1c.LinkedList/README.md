@@ -1,12 +1,3 @@
-[1c1_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c1.java)
-
-[1c2_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c2.java)
-
-[1c3_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c3.java)
-
-[1c4_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c4.java)
-
-[1c5_LinkedList]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/LinkedList1c5.java)
 
 [1c1_LinkedList output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/1c.LinkedList/1c1_LinkedList%20output.png)
 
