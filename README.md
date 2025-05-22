@@ -110,13 +110,7 @@ ________________________________________________________________________________
 [4c_Swings1 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/4c.Swings1/4c%20output.png)
 ____________________________________________________________________________________________________________________________
 5.SWING PROGRAMS
-[5a_Swings2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5a.Swings2/5a.Swings.java)
 
-[5a_Swings2 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5a.Swings2/5a%20output.png)
-
-[5b_Swings2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5b.Swings2/5b.Swings2.java)
-
-[5b_Swings2 output]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/5b.Swings2/5b%20output.png)
 _____________________________________________________________________________________________________________________________
 6.SERVLET PROGRAM
 _____________________________________________________________________________________________________________________________
