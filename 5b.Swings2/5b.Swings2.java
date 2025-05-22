@@ -2,41 +2,41 @@
 Develop a Swing program in Java to create a Tabbed Pan of RED, BLUE and GREEN and
 display the concerned color whenever the specific tab is selected in the Pan.
   */
-package swing5b;
+package stringoperations;
 import javax.swing.*;
 import java.awt.*;
 
-public class ColorTabbedPaneApp extends JFrame {
-			public ColorTabbedPaneApp() {
-	        setTitle("Color Tabbed Pane");
-	        setSize(400, 300);
-	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+public class ColorTabbedPane {
 
-	        // Create JTabbedPane
-	        JTabbedPane tabbedPane = new JTabbedPane();
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("Color Tabbed Pane");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
 
-	        // Create panels for each color
-	        JPanel redPanel = new JPanel();
-	        redPanel.setBackground(Color.RED);
+        // Create the tabbed pane
+        JTabbedPane tabbedPane = new JTabbedPane();
 
-	        JPanel bluePanel = new JPanel();
-	        bluePanel.setBackground(Color.BLUE);
+        // Create panels with background colors
+        JPanel redPanel = new JPanel();
+        redPanel.setBackground(Color.RED);
 
-	        JPanel greenPanel = new JPanel();
-	        greenPanel.setBackground(Color.GREEN);
+        JPanel bluePanel = new JPanel();
+        bluePanel.setBackground(Color.BLUE);
 
-	        // Add tabs
-	        tabbedPane.addTab("RED", redPanel);
-	        tabbedPane.addTab("BLUE", bluePanel);
-	        tabbedPane.addTab("GREEN", greenPanel);
+        JPanel greenPanel = new JPanel();
+        greenPanel.setBackground(Color.GREEN);
 
-	        // Add tabbedPane to the frame
-	        add(tabbedPane);
+        // Add tabs to the tabbed pane
+        tabbedPane.addTab("RED", redPanel);
+        tabbedPane.addTab("BLUE", bluePanel);
+        tabbedPane.addTab("GREEN", greenPanel);
 
-	        setVisible(true);
-	    }
+        // Add the tabbed pane to the frame
+        frame.add(tabbedPane);
 
-	    public static void main(String[] args) {
-	        new ColorTabbedPaneApp();
-	    }
-	}
+        // Center and show the frame
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+}
