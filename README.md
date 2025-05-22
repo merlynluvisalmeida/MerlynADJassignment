@@ -99,6 +99,10 @@ ________________________________________________________________________________
 [7b_CookieManagement output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/7b.CookieManagement/cookie2.png)
 _____________________________________________________________________________________________________________________________
 8.HTML AND JSP AND JDBC PROGRAM
+
+[8a_JDBC_Coffee_Employee output1]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8a.JDBC_Coffee_Employee/8a%20output1.png)
+
+[8a_JDBC_Coffee_Employee output2]->(https://github.com/merlynluvisalmeida/MerlynADJassignment/blob/main/8a.JDBC_Coffee_Employee/8a%20output2.png)
 _____________________________________________________________________________________________________________________________
 9.MSQL PROGRAM
 _____________________________________________________________________________________________________________________________
