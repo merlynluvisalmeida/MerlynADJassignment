@@ -1,4 +1,3 @@
-<!-- WebContent/update_form.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,11 +5,19 @@
 </head>
 <body>
     <h2>Update Coffee Product</h2>
-    <form action="update.jsp" method="post">
-        Enter Coffee ID to Update: <input type="number" name="id" required><br><br>
-        New Coffee Name: <input type="text" name="coffee_name" required><br><br>
-        New Price: <input type="number" step="0.01" name="price" required><br><br>
+    <form action="UpdateCoffee.jsp" method="post">
+        <label for="id">Coffee ID:</label>
+        <input type="number" name="id" required><br><br>
+
+        <label for="coffee_name">Coffee Name:</label>
+        <input type="text" name="coffee_name" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" required><br><br>
+
         <input type="submit" value="Update Coffee">
     </form>
+
+    <p><a href="showCoffee.jsp">Show All Coffee Products</a></p>
 </body>
 </html>
