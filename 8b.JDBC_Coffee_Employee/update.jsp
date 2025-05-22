@@ -4,68 +4,51 @@ existing coffee product in the table with its id. [Create a table coffee with fi
 ( id,coffee_name,price)] using HTML and JSP to get the fields and display the results respectively
 */
 
-
-
 <%@ page import="java.sql.*" %>
 <%
-    int id = Integer.parseInt(request.getParameter("id"));
-    String newName = request.getParameter("coffee_name");
-    double newPrice = Double.parseDouble(request.getParameter("price"));
+    String jdbcURL = "jdbc:mysql://localhost:3306/test12";
+    String dbUser = "root";  // change if needed
+    String dbPassword = "";  // change if needed
 
-    String url = "jdbc:mysql://localhost:3306/test123";
-    String user = "root";         // change if needed
-    String password = "";         // set your MySQL password
+    String idStr = request.getParameter("id");
+    String coffeeName = request.getParameter("coffee_name");
+    String priceStr = request.getParameter("price");
 
-    Connection conn = null;
-    PreparedStatement updateStmt = null;
-    Statement selectStmt = null;
-    ResultSet rs = null;
+    if (idStr != null && coffeeName != null && priceStr != null) {
+        int id = Integer.parseInt(idStr);
+        double price = Double.parseDouble(priceStr);
 
-    try {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection(url, user, password);
+        Connection conn = null;
+        PreparedStatement pstmt = null;
 
-        // Update the record
-        String updateSQL = "UPDATE coffee SET coffee_name = ?, price = ? WHERE id = ?";
-        updateStmt = conn.prepareStatement(updateSQL);
-        updateStmt.setString(1, newName);
-        updateStmt.setDouble(2, newPrice);
-        updateStmt.setInt(3, id);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-        int rows = updateStmt.executeUpdate();
+            String sql = "UPDATE coffee SET coffee_name=?, price=? WHERE id=?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, coffeeName);
+            pstmt.setDouble(2, price);
+            pstmt.setInt(3, id);
 
-        if (rows > 0) {
-            out.println("<h3>Coffee with ID " + id + " updated successfully.</h3>");
-        } else {
-            out.println("<h3>No record found with ID " + id + ".</h3>");
+            int rowsUpdated = pstmt.executeUpdate();
+
+            out.println("<h3>Update Result</h3>");
+            if (rowsUpdated > 0) {
+                out.println("Coffee product with ID " + id + " updated successfully.");
+            } else {
+                out.println("No coffee product found with ID " + id + ".");
+            }
+
+            out.println("<p><a href='showCoffee.jsp'>Show All Coffee Products</a></p>");
+            out.println("<p><a href='updateCoffee.html'>Update Another Coffee</a></p>");
+        } catch (Exception e) {
+            out.println("Error: " + e.getMessage());
+        } finally {
+            if (pstmt != null) try { pstmt.close(); } catch(Exception e) {}
+            if (conn != null) try { conn.close(); } catch(Exception e) {}
         }
-
-        // Display all records
-        selectStmt = conn.createStatement();
-        rs = selectStmt.executeQuery("SELECT * FROM coffee");
-
-%>
-        <h3>All Coffee Products:</h3>
-        <table border="1">
-            <tr><th>ID</th><th>Coffee Name</th><th>Price</th></tr>
-            <%
-                while(rs.next()) {
-            %>
-                <tr>
-                    <td><%= rs.getInt("id") %></td>
-                    <td><%= rs.getString("coffee_name") %></td>
-                    <td><%= rs.getDouble("price") %></td>
-                </tr>
-            <%
-                }
-            %>
-        </table>
-<%
-    } catch(Exception e) {
-        out.println("<p>Error: " + e.getMessage() + "</p>");
-    } finally {
-        try { if(updateStmt != null) updateStmt.close(); } catch(Exception e) {}
-        try { if(selectStmt != null) selectStmt.close(); } catch(Exception e) {}
-        try { if(conn != null) conn.close(); } catch(Exception e) {}
+    } else {
+        out.println("Invalid input.");
     }
 %>
